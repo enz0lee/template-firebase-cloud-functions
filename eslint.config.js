@@ -23,6 +23,20 @@ export default [
         sourceType: 'module',
         project: './tsconfig.json',
       },
+      globals: {
+        // Node.js globals including fetch
+        fetch: 'readonly',
+        console: 'readonly',
+        process: 'readonly',
+        Buffer: 'readonly',
+        __dirname: 'readonly',
+        __filename: 'readonly',
+        global: 'readonly',
+        module: 'readonly',
+        require: 'readonly',
+        exports: 'readonly',
+        URLSearchParams: 'readonly',
+      },
     },
     plugins: {
       '@typescript-eslint': typescript,
@@ -68,6 +82,7 @@ export default [
       // Node.js rules
       'node/no-unsupported-features/es-syntax': 'off', // TypeScript handles this
       'node/no-missing-import': 'off', // TypeScript handles this
+      'node/no-unsupported-features/node-builtins': 'off', // This allows fetch and other Node.js globals
 
       // Promise rules
       'promise/always-return': 'error',
@@ -97,6 +112,20 @@ export default [
     languageOptions: {
       ecmaVersion: 2020,
       sourceType: 'module',
+      globals: {
+        // Node.js globals including fetch
+        fetch: 'readonly',
+        console: 'readonly',
+        process: 'readonly',
+        Buffer: 'readonly',
+        __dirname: 'readonly',
+        __filename: 'readonly',
+        global: 'readonly',
+        module: 'readonly',
+        require: 'readonly',
+        exports: 'readonly',
+        URLSearchParams: 'readonly',
+      },
     },
     plugins: {
       import: importPlugin,
@@ -130,6 +159,9 @@ export default [
       'prefer-const': 'error',
       'no-var': 'error',
       'prettier/prettier': 'error',
+
+      // Node.js rules
+      'node/no-unsupported-features/node-builtins': 'off', // This allows fetch and other Node.js globals
     },
   },
 
