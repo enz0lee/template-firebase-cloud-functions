@@ -1,13 +1,17 @@
 import js from '@eslint/js'
 import typescript from '@typescript-eslint/eslint-plugin'
 import typescriptParser from '@typescript-eslint/parser'
+import prettierConfig from 'eslint-config-prettier'
 import importPlugin from 'eslint-plugin-import'
 import nodePlugin from 'eslint-plugin-node'
+import prettier from 'eslint-plugin-prettier'
 import promisePlugin from 'eslint-plugin-promise'
 
 export default [
   // Base JavaScript recommended rules
   js.configs.recommended,
+  // Prettier config to disable conflicting rules
+  prettierConfig,
 
   // TypeScript files configuration
   {
@@ -24,6 +28,7 @@ export default [
       '@typescript-eslint': typescript,
       import: importPlugin,
       node: nodePlugin,
+      prettier: prettier,
       promise: promisePlugin,
     },
     rules: {
@@ -73,6 +78,9 @@ export default [
       'promise/no-return-in-finally': 'error',
       'promise/valid-params': 'error',
 
+      // Prettier rules
+      'prettier/prettier': 'error',
+
       // General rules
       'no-console': 'warn',
       'no-debugger': 'error',
@@ -93,6 +101,7 @@ export default [
     plugins: {
       import: importPlugin,
       node: nodePlugin,
+      prettier: prettier,
       promise: promisePlugin,
     },
     rules: {
@@ -120,6 +129,7 @@ export default [
       'no-unused-expressions': 'error',
       'prefer-const': 'error',
       'no-var': 'error',
+      'prettier/prettier': 'error',
     },
   },
 

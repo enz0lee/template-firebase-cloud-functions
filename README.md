@@ -6,6 +6,7 @@ A TypeScript-based template for Firebase Cloud Functions with ESLint 9 (flat con
 
 - ⚡ **TypeScript** - Full TypeScript support with strict configuration
 - 🛡️ **ESLint 9** - Modern flat config with TypeScript rules
+- 🎨 **Prettier** - Code formatting with ESLint integration
 - 🔥 **Firebase Functions** - Ready-to-use Firebase Cloud Functions setup
 - 📦 **Modern Node.js** - Built for Node.js 22+
 - 🚀 **Development Tools** - Hot reload, linting, and build optimization
@@ -45,6 +46,8 @@ A TypeScript-based template for Firebase Cloud Functions with ESLint 9 (flat con
 
 - `npm run lint` - Run ESLint to check code quality
 - `npm run lint:fix` - Run ESLint and automatically fix issues
+- `npm run format` - Format code with Prettier
+- `npm run format:check` - Check if code is properly formatted
 - `npm run build` - Build the TypeScript code
 - `npm run build:watch` - Build in watch mode for development
 - `npm run serve` - Start Firebase emulator with functions
@@ -92,14 +95,27 @@ ESLint 9 flat config includes:
 - Promise best practices
 - Node.js compatibility
 - Firebase Functions best practices
+- Prettier integration (conflict prevention)
+
+### Prettier
+
+Prettier configuration includes:
+
+- Single quotes for strings
+- No semicolons
+- 2-space indentation
+- 80 character line width
+- Trailing commas for cleaner diffs
+- Automatic formatting on save (when configured in your editor)
 
 ## Development Workflow
 
 1. Write your functions in `src/index.ts` or create separate modules
-2. Use `npm run lint` to check code quality
-3. Use `npm run build:watch` during development for automatic compilation
-4. Test locally with `npm run serve`
-5. Deploy with `npm run deploy`
+2. Use `npm run format` to format your code
+3. Use `npm run lint` to check code quality
+4. Use `npm run build:watch` during development for automatic compilation
+5. Test locally with `npm run serve`
+6. Deploy with `npm run deploy`
 
 ## Adding New Functions
 
