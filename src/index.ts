@@ -15,7 +15,7 @@ export const helloWorld = onRequest((_request, response) => {
 })
 
 // Example callable function
-export const getUserData = onCall(async request => {
+export const getUserData = onCall(async (request) => {
   // Check if user is authenticated
   if (!request.auth) {
     throw new Error('User must be authenticated')
@@ -38,7 +38,7 @@ export const getUserData = onCall(async request => {
 // Example Firestore trigger
 export const onUserCreated = onDocumentCreated(
   'users/{userId}',
-  async event => {
+  async (event) => {
     const userData = event.data?.data()
     const userId = event.params.userId
 
