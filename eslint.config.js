@@ -133,12 +133,6 @@ export default [
 
   // Ignore patterns
   {
-    ignores: [
-      'lib/**',
-      'node_modules/**',
-      'coverage/**',
-      'dist/**',
-      'build/**',
-    ],
+    ignores: ['node_modules/**', 'coverage/**', 'dist/**', 'build/**'],
   },
 ]

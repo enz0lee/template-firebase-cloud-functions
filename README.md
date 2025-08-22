@@ -56,7 +56,7 @@ A TypeScript-based template for Firebase Cloud Functions with ESLint 9 (flat con
 ```
 ├── src/
 │   └── index.ts          # Main functions entry point
-├── lib/                  # Compiled JavaScript (generated)
+├── dist/                  # Compiled JavaScript (generated)
 ├── tsconfig.json         # TypeScript configuration
 ├── eslint.config.js      # ESLint 9 flat config
 ├── package.json          # Dependencies and scripts

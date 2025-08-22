@@ -11,13 +11,13 @@
     "start": "npm run shell",
     "deploy": "firebase deploy --only functions",
     "logs": "firebase functions:log",
-    "clean": "rm -rf lib",
+    "clean": "rm -rf dist",
     "prebuild": "npm run clean"
   },
   "engines": {
     "node": "22"
   },
-  "main": "lib/index.js",
+  "main": "dist/index.js",
   "private": true,
   "dependencies": {
     "firebase-admin": "^13.4.0",
